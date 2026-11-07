@@ -1,24 +1,49 @@
 cff-version: 1.2.0
 message: "If you use this dataset or tool, please cite it as below."
-title: "SWHForest: A Structure-Aware Catalog for Pointer-Only Code Corpora"
+title: "SWHForest: A Structural Curation and Search Layer for Large-Scale Code Corpora"
 version: 0.2.0
-date-released: 2026-10-29
+date-released: 2026-11-07
 # The license below covers the code (MIT). The license of the released data
-# (data/release/) is stated in README.md, section "Licensing".
+# (data/release/) is CC-BY-4.0, as stated in README.md.
 license: MIT
 abstract: >-
-  Feature tables, a sharded structural index and view manifests for a 40% uniform
-  hash-selected sample of ten Stack-Edu languages, keyed by Software Heritage
-  identifiers and distributed without any source text, with the swhforest Python
-  package that builds and queries them. The data license is given in README.md.
+  Syntactic feature tables, a sharded inverted AST index, and reproducible view
+  manifests for a 40% uniform hash-selected sample of ten Stack-Edu languages
+  (52.1M unique files, 340.6M definitions), keyed by Software Heritage blob_id
+  and distributed without any source text, together with the swhforest Python
+  package that builds and queries them.
 authors:
   - family-names: "Pennino"
     given-names: "Federico"
-    affiliation: "University of Bologna"
+    affiliation: "Department of Computer Science and Engineering, University of Bologna"
+  - family-names: "Gurioli"
+    given-names: "Andrea"
+    affiliation: "Department of Computer Science and Engineering, University of Bologna"
+  - family-names: "Gabbrielli"
+    given-names: "Maurizio"
+    affiliation: "Department of Computer Science and Engineering, University of Bologna"
+  - family-names: "Ferragina"
+    given-names: "Paolo"
+    affiliation: "Sant'Anna School of Advanced Studies, Pisa"
 repository-code: "https://github.com/halykoss/swhforest"
+url: "https://huggingface.co/datasets/halykoss/swhforest"
 keywords:
   - code corpus
   - software heritage
   - abstract syntax tree
   - dataset curation
   - structural catalog
+preferred-citation:
+  type: conference-paper
+  title: "SWHForest: A Structural Curation and Search Layer for Large-Scale Code Corpora"
+  authors:
+    - family-names: "Pennino"
+      given-names: "Federico"
+    - family-names: "Gurioli"
+      given-names: "Andrea"
+    - family-names: "Gabbrielli"
+      given-names: "Maurizio"
+    - family-names: "Ferragina"
+      given-names: "Paolo"
+  collection-title: "Proceedings of the International Conference on Mining Software Repositories (MSR)"
+  year: 2026

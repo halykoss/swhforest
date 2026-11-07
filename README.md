@@ -144,8 +144,9 @@ To rebuild a release from upstream Stack-Edu metadata and SWH blobs, see `script
 
 ---
 
-## License & Citation
+## Authors, License & Citation
 
+- **Authors:** Federico Pennino, Andrea Gurioli, Maurizio Gabbrielli (University of Bologna), and Paolo Ferragina (Sant'Anna School of Advanced Studies, Pisa).
 - **Code:** MIT ([`LICENSE`](LICENSE)) · **Dataset tables & index:** CC-BY-4.0 · **Source blobs:** fetched on demand from Software Heritage under their original upstream licenses.
 
 ```bibtex
