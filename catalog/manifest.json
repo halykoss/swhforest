@@ -1,0 +1,41 @@
+{
+ "seed": 20261025,
+ "n_per_language": 50000,
+ "blobs": 100000,
+ "languages": {
+  "python": 50000,
+  "javascript": 50000
+ },
+ "eligible_rows": {
+  "python": 4739707,
+  "javascript": 4312662
+ },
+ "size_filter": [
+  200,
+  200000
+ ],
+ "source": {
+  "python": "stack-edu Python/train-00000-of-00005.parquet",
+  "javascript": "stack-edu JavaScript/train-00000-of-00003.parquet"
+ },
+ "dataset_version": "0.1.1",
+ "source_revision": {
+  "repo": "HuggingFaceTB/stack-edu",
+  "revision": "eeec5caac5cc3758a18f1d3ba4416837a9ba814c"
+ },
+ "built_at": "2026-10-28T08:25:04Z",
+ "files_ok": 100000,
+ "files_error": 0,
+ "parse_errors": 1755,
+ "definitions": 613950,
+ "shape_clusters": 466609,
+ "parser_versions": {
+  "tree-sitter": "0.26.0",
+  "tree-sitter-python": "0.25.0",
+  "tree-sitter-javascript": "0.25.0",
+  "pyarrow": "17.0.0",
+  "zstandard": "0.25.0",
+  "numpy": "2.5.4"
+ },
+ "bytes_note": "catalog.bytes = real SWH blob length; source_bytes = HF length_bytes"
+}

@@ -1,0 +1,48 @@
+{
+ "language": "cpp",
+ "functions": [
+  "function_definition",
+  "lambda_expression"
+ ],
+ "classes": [
+  "class_specifier",
+  "struct_specifier",
+  "union_specifier",
+  "enum_specifier"
+ ],
+ "methods": [],
+ "method_containers": [
+  "class_specifier",
+  "struct_specifier",
+  "union_specifier"
+ ],
+ "comments": [
+  "comment"
+ ],
+ "imports": [
+  "preproc_include",
+  "using_declaration"
+ ],
+ "strings": [
+  "string_literal",
+  "raw_string_literal",
+  "char_literal",
+  "concatenated_string"
+ ],
+ "identifiers": [
+  "identifier",
+  "field_identifier",
+  "type_identifier",
+  "namespace_identifier"
+ ],
+ "docstring": "prefix",
+ "doc_prefixes": [
+  "/**",
+  "///",
+  "//!",
+  "/*!"
+ ],
+ "_notes": "tree_sitter_cpp 0.23.4. Definitions: function_definition (free functions, inline methods, ctors/dtors, operators, also '= default'/'= delete' member definitions; prototypes are 'declaration'/'field_declaration' and are excluded) and lambda_expression (treated like JS arrow functions). Classes: class_specifier, struct_specifier, union_specifier, enum_specifier. kind=method when nested under a class/struct/union specifier (method_containers; enums excluded), so lambdas inside in-class methods are methods, as in JS. Spans of templated definitions exclude the enclosing template_declaration header. Known gaps (not expressible with type sets): (1) out-of-class member definitions 'T C::m() {...}' are top-level function_definition nodes and get kind=function; (2) the *_specifier types are also used for forward declarations ('class X;') and elaborated type uses ('struct sockaddr *p'), which have no body field and are counted as classes (~14% of class defs on dev data); fixing needs a 'require body field' option in features.analyze. Docs: Doxygen prefixes /**, ///, //!, /*!; banner comments like '////' or '/***' also match. Imports: preproc_include and using_declaration (using namespace / using std::x). No listed type collides with an anonymous token (the grammar's only named/anonymous collisions are decltype and noexcept). Added: class_requires_body (forward declarations and elaborated type uses are not classes) and qualified_methods (definitions whose declarator is a qualified_identifier, e.g. 'T C::m() {...}' and also 'ns::f()', count as methods).",
+ "class_requires_body": true,
+ "qualified_methods": true
+}

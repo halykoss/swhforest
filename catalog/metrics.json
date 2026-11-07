@@ -1,0 +1,14 @@
+{
+ "files": 100000,
+ "seconds": 2748.6,
+ "files_per_second": 36.4,
+ "source_bytes": 276209730,
+ "parse_errors": 1755,
+ "definitions": 613950,
+ "shape_clusters": 466609,
+ "sizes": {
+  "catalog.parquet": 14180324,
+  "functions.parquet": 17725805,
+  "shapes.parquet": 15760130
+ }
+}

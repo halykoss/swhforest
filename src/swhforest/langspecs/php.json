@@ -1,0 +1,14 @@
+{
+  "language": "php",
+  "functions": ["function_definition", "method_declaration", "anonymous_function", "arrow_function"],
+  "classes": ["class_declaration", "interface_declaration", "trait_declaration", "enum_declaration", "anonymous_class"],
+  "methods": ["method_declaration"],
+  "method_containers": [],
+  "comments": ["comment"],
+  "imports": ["namespace_use_declaration", "include_expression", "include_once_expression", "require_expression", "require_once_expression"],
+  "strings": ["string", "encapsed_string", "heredoc", "nowdoc"],
+  "identifiers": ["name"],
+  "docstring": "prefix",
+  "doc_prefixes": ["/**"],
+  "_notes": "Grammar tree_sitter_php 0.25.1, language_php (PHP with inline HTML; the HTML is opaque 'text' nodes). Functions: function_definition (named functions, incl. nested/conditional ones), method_declaration (kind method; includes constructors and also bodiless abstract/interface method declarations, which the grammar does not distinguish by node type), anonymous_function (closures, function() use (...) {...}) and arrow_function (fn() => ...), the latter two counted like JavaScript function expressions/arrow functions. Classes: class_declaration, interface_declaration, trait_declaration, enum_declaration, anonymous_class (new class {...}, like the JS 'class' expression). method_containers is empty: in PHP only method_declaration (which occurs only inside class/interface/trait/enum bodies) is a method; a closure or a nested named function inside a method body stays a function. Docs: PHPDoc comments start with '/**' (the grammar has a single 'comment' type for #, //, /* */ and /** */). Imports: use declarations (namespace_use_declaration; trait 'use' inside classes is use_declaration and is not counted) plus include/require(_once) expressions. Strings: single-quoted 'string', double-quoted 'encapsed_string', heredoc, nowdoc. Identifiers: 'name' (covers function/class/method/constant names and the name inside every $variable). Caveat: 'string' is also an anonymous token of the grammar (the keyword inside primitive_type, e.g. a 'string' type hint), and n_strings counts node types without an is_named check, so string type hints are counted as strings (about 1% of 'string' nodes on the dev sample). No definition/class type is also an anonymous token. Other named/anonymous collisions in the grammar: 'float', 'null' (not used here)."
+}

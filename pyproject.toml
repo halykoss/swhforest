@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swhforest"
+version = "0.2.0"
+description = "Structural curation and search layer for pointer-based code corpora (Software Heritage)"
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Federico Pennino"}, {name = "Andrea Gurioli"}, {name = "Maurizio Gabbrielli"}, {name = "Paolo Ferragina"}]
+dependencies = ["tree-sitter", "tree-sitter-python", "tree-sitter-javascript", "pyarrow", "numpy", "zstandard", "duckdb", "ast-grep-py"]
+
+[project.optional-dependencies]
+# Grammars of the other eight release languages, at the versions used to build 0.2.0.
+all-languages = [
+    "tree-sitter-java==0.23.5", "tree-sitter-typescript==0.23.2", "tree-sitter-c==0.24.2",
+    "tree-sitter-cpp==0.23.4", "tree-sitter-c-sharp==0.23.5", "tree-sitter-go==0.25.0",
+    "tree-sitter-rust==0.24.2", "tree-sitter-php==0.25.1",
+]
+dev = ["pytest"]
+
+[project.urls]
+Repository = "https://github.com/halykoss/swhforest"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+swhforest = ["langspecs/*.json"]

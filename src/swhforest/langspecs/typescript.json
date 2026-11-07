@@ -1,0 +1,50 @@
+{
+  "language": "typescript",
+  "functions": [
+    "function_declaration",
+    "function_expression",
+    "arrow_function",
+    "generator_function_declaration",
+    "generator_function",
+    "method_definition"
+  ],
+  "classes": [
+    "class_declaration",
+    "abstract_class_declaration",
+    "class",
+    "interface_declaration",
+    "enum_declaration"
+  ],
+  "methods": [
+    "method_definition"
+  ],
+  "method_containers": [
+    "class_declaration",
+    "abstract_class_declaration",
+    "class"
+  ],
+  "comments": [
+    "comment",
+    "html_comment"
+  ],
+  "imports": [
+    "import_statement",
+    "import_alias"
+  ],
+  "strings": [
+    "string_fragment"
+  ],
+  "identifiers": [
+    "identifier",
+    "property_identifier",
+    "shorthand_property_identifier",
+    "shorthand_property_identifier_pattern",
+    "private_property_identifier",
+    "type_identifier"
+  ],
+  "docstring": "prefix",
+  "doc_prefixes": [
+    "/**"
+  ],
+  "_notes": "tree_sitter_typescript 0.23.2; same node-type names in the typescript and tsx grammars. Mirrors the built-in javascript spec: functions = function_declaration, function_expression, arrow_function, generator_function(_declaration), method_definition (arrow functions/lambdas count, as in JS). Bodyless prototypes are NOT definitions: function_signature (overloads, declare function), method_signature (interfaces, class overloads, declare class), abstract_method_signature. classes = class_declaration, abstract_class_declaration, class (class expression; 'class' is also an anonymous keyword token, relies on the is_named guard), interface_declaration, enum_declaration; namespaces (internal_module/module) and type aliases are not definitions. method_containers = class_declaration, abstract_class_declaration, class, so any function nested in a class body (incl. arrow-function fields and callbacks inside methods) is a method, as in JS; object-literal method_definition is a method via 'methods'. Decorators are siblings of the definition node, so spans exclude them. strings = string_fragment because 'string' is also an anonymous token (the predefined type keyword in ': string') and the counts have no is_named guard; on the dev set string_fragment=3843 vs true literals (string+template_string)=3778, whereas listing 'string' would add 1001 keyword tokens. Other dual named/anonymous types in the grammar, not listed anywhere: asserts, import, module, number, object, string. Docs: /** JSDoc/TSDoc comments."
+}

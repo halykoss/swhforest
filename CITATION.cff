@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this dataset or tool, please cite it as below."
+title: "SWHForest: A Structure-Aware Catalog for Pointer-Only Code Corpora"
+version: 0.2.0
+date-released: 2026-10-29
+# The license below covers the code (MIT). The license of the released data
+# (data/release/) is stated in README.md, section "Licensing".
+license: MIT
+abstract: >-
+  Feature tables, a sharded structural index and view manifests for a 40% uniform
+  hash-selected sample of ten Stack-Edu languages, keyed by Software Heritage
+  identifiers and distributed without any source text, with the swhforest Python
+  package that builds and queries them. The data license is given in README.md.
+authors:
+  - family-names: "Pennino"
+    given-names: "Federico"
+    affiliation: "University of Bologna"
+repository-code: "https://github.com/halykoss/swhforest"
+keywords:
+  - code corpus
+  - software heritage
+  - abstract syntax tree
+  - dataset curation
+  - structural catalog

@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+data/raw/
+data/blobs/
+*.egg-info/
+.DS_Store
+# Data lives on the data host, not in git (see README)
+data/
+catalog/*.parquet
+catalog/views/
+results/

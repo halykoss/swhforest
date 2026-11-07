@@ -1,0 +1,14 @@
+{
+  "language": "rust",
+  "functions": ["function_item", "closure_expression"],
+  "classes": ["struct_item", "enum_item", "union_item", "trait_item"],
+  "methods": [],
+  "method_containers": ["impl_item", "trait_item"],
+  "comments": ["line_comment", "block_comment"],
+  "imports": ["use_declaration", "extern_crate_declaration"],
+  "strings": ["string_literal", "raw_string_literal"],
+  "identifiers": ["identifier", "type_identifier", "field_identifier", "shorthand_field_identifier"],
+  "docstring": "prefix",
+  "doc_prefixes": ["///", "//!", "/**", "/*!"],
+  "_notes": "Definitions: function_item (fn with a body) is a function, or a method when it has an impl_item/trait_item ancestor (inherent/trait impl methods and trait default methods). function_signature_item (bodyless trait method / extern fn prototypes) is excluded, like C prototypes. closure_expression is a function, mirroring JavaScript arrow functions; as in JavaScript, closures and nested fns inside an impl/trait method are counted as methods. classes: struct_item, enum_item, union_item, trait_item (trait ~ interface); impl_item is not a type definition, so it is a method container only, not a class. mod_item, macro_definition, type_item, const/static items are not definitions. Comments: line_comment and block_comment (doc comments are line_comment/block_comment nodes with a doc_comment child); doc prefixes ///, //!, /**, /*! (note: //// and /*** also match by prefix although rustc treats them as plain comments). None of the listed types is ever an anonymous token in tree-sitter-rust 0.24 (only 'block' and 'lifetime' are both named and anonymous, and neither is listed)."
+}

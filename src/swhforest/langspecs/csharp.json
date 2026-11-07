@@ -1,0 +1,49 @@
+{
+  "language": "csharp",
+  "functions": [
+    "method_declaration",
+    "constructor_declaration",
+    "destructor_declaration",
+    "operator_declaration",
+    "conversion_operator_declaration",
+    "local_function_statement",
+    "lambda_expression",
+    "anonymous_method_expression"
+  ],
+  "classes": [
+    "class_declaration",
+    "struct_declaration",
+    "interface_declaration",
+    "enum_declaration",
+    "record_declaration"
+  ],
+  "methods": [
+    "method_declaration",
+    "constructor_declaration",
+    "destructor_declaration",
+    "operator_declaration",
+    "conversion_operator_declaration"
+  ],
+  "comments": [
+    "comment"
+  ],
+  "imports": [
+    "using_directive",
+    "extern_alias_directive"
+  ],
+  "strings": [
+    "string_literal",
+    "verbatim_string_literal",
+    "raw_string_literal",
+    "interpolated_string_expression"
+  ],
+  "identifiers": [
+    "identifier"
+  ],
+  "docstring": "prefix",
+  "doc_prefixes": [
+    "///",
+    "/**"
+  ],
+  "_notes": "tree-sitter-c-sharp 0.23.5. functions: methods, constructors, destructors, operators, conversion operators, local functions, lambdas and anonymous methods (delegate(...){...}), mirroring JavaScript arrow/function expressions; lambdas/local functions inside a type get kind 'method' via the default method_containers (= classes), outside any type (top-level statements) kind 'function'. methods: the member declarations, always kind 'method'. Not definitions: property/indexer/event accessors (accessor_declaration also covers bodiless auto 'get;'), delegate_declaration (a signature-only type), namespaces. Bodiless abstract/interface/extern/partial method_declaration share the node type with real methods and cannot be separated by type, so they are counted. classes: class/struct/interface/enum/record (record_declaration also covers 'record struct'). Definition spans include leading attribute lists ([Fact], [HttpGet]) because the grammar puts attribute_list inside the declaration node; XML doc comments are separate comment nodes. Docs: '///' XML doc and '/**' comments. imports: using_directive (incl. using static / alias, global using) and extern_alias_directive; strings: regular, verbatim, raw and interpolated string literals (character_literal excluded). None of the listed types is also an anonymous token."
+}

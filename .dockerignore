@@ -1,0 +1,43 @@
+# Build context for the release image: allow-list, then hard excludes.
+*
+!requirements.txt
+!pyproject.toml
+!README.md
+!SCHEMA.md
+!LICENSE
+!CITATION.cff
+!src/
+!examples/
+!tests/
+# release sample: one language only
+!data/release/rust/rows.parquet
+!data/release/rust/catalog.parquet
+!data/release/rust/functions.parquet
+!data/release/rust/shapes.parquet
+!data/release/rust/structure-*.parquet
+!data/release/rust/selection.json
+!data/release/rust/ingest_metrics.json
+!data/release/rust/view_release.json
+!data/release/rust/missing.txt
+# 100k sample (examples 01-03)
+!catalog/README.md
+!catalog/SCHEMA.md
+!catalog/catalog.parquet
+!catalog/functions.parquet
+!catalog/shapes.parquet
+!catalog/structure.parquet
+!catalog/manifest.json
+!catalog/metrics.json
+!catalog/structure_metrics.json
+!catalog/views.json
+!catalog/views/
+
+# never in the image (these rules come last, so they win)
+data/raw/
+data/blobs/
+data/*.jsonl
+data/release/*/_pairs/
+**/*.log
+.venv/
+**/__pycache__
+**/*.pyc

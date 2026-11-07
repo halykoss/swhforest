@@ -1,0 +1,14 @@
+{
+  "language": "c",
+  "functions": ["function_definition"],
+  "classes": [],
+  "methods": [],
+  "method_containers": [],
+  "comments": ["comment"],
+  "imports": ["preproc_include"],
+  "strings": ["string_literal"],
+  "identifiers": ["identifier", "field_identifier", "type_identifier"],
+  "docstring": "prefix",
+  "doc_prefixes": ["/**", "/*!", "///", "//!"],
+  "_notes": "tree_sitter_c 0.24.2. Definitions = function_definition only (always has a compound_statement body; prototypes are 'declaration' and are excluded). C has no methods, so methods/method_containers are empty. classes is empty on purpose: struct_specifier/union_specifier/enum_specifier are the same node type for definitions (with a body field) and for mere references like 'struct foo *p' (about 90% of struct_specifier nodes in dev data have no body), and a type-only spec cannot tell them apart; the body nodes (field_declaration_list, enumerator_list) would not span the whole definition. No listed type is also an anonymous token in this grammar (named/anonymous kind sets are disjoint), so the is_named guard is not relied on. Known gaps: implicit-int / K&R functions such as 'main() {...}' are not parsed as function_definition by the grammar (ERROR + compound_statement) and are missed; C++ code in .c/.C files is parsed with errors but its functions are still mostly function_definition. Docs: Doxygen comment prefixes /** /*! /// //!. strings counts string_literal (concatenated_string parts are still counted individually); imports counts #include."
+}

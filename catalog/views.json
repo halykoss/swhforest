@@ -1,0 +1,20 @@
+{
+ "all": {
+  "blobs": 100000,
+  "manifest_bytes": 4400494,
+  "text_bytes": 276787554,
+  "sha256": "7c1b3310ad3ee68341206f6af2c394992bcfcff098cca8d042873a72d50a310c"
+ },
+ "docstring": {
+  "blobs": 18088,
+  "manifest_bytes": 796394,
+  "text_bytes": 87664819,
+  "sha256": "7b45e556ecd160f552b72532b9c78757bb907c494df80b41258a1f6c3b9c43b0"
+ },
+ "no_boilerplate": {
+  "blobs": 80453,
+  "manifest_bytes": 3540535,
+  "text_bytes": 194940865,
+  "sha256": "8175033cf90beacc867a568de1b572a853bef6d88d67a9f5452d914005549b5c"
+ }
+}

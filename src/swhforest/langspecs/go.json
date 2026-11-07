@@ -1,0 +1,14 @@
+{
+  "language": "go",
+  "functions": ["function_declaration", "method_declaration", "func_literal"],
+  "classes": ["type_spec"],
+  "methods": ["method_declaration"],
+  "method_containers": [],
+  "comments": ["comment"],
+  "imports": ["import_spec"],
+  "strings": ["interpreted_string_literal", "raw_string_literal"],
+  "identifiers": ["identifier", "field_identifier", "type_identifier", "package_identifier"],
+  "docstring": "prefix",
+  "doc_prefixes": [],
+  "_notes": "Go has no classes: every named type definition (type_spec: struct, interface, func, map, basic underlying types, generic types) counts as a class; type aliases (type_alias, `type A = B`) and anonymous struct/interface literals (struct_type/interface_type, e.g. table-test []struct{...}) are not definitions. The type_spec span starts at the type name and excludes the `type` keyword, since one type_declaration may group several specs in parentheses. function_declaration -> function, method_declaration (with receiver) -> method; func_literal (closures) count as functions, consistent with JavaScript arrow/function expressions. method_containers is empty: functions nested in methods stay functions and interface method_elem are signatures, not definitions. Go doc comments are ordinary // comments preceding a declaration, not syntactically distinguishable, so doc_prefixes is [] (has_docstring always false). imports counts import_spec (one per imported package, also inside grouped import (...) blocks). No listed type is also used as an anonymous token in tree-sitter-go 0.25.0."
+}

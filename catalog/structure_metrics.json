@@ -1,0 +1,85 @@
+{
+ "blobs": 100000,
+ "features": 1537956,
+ "postings": 31593726,
+ "per_family": {
+  "E": {
+   "features": 1126,
+   "postings": 2255120
+  },
+  "T": {
+   "features": 1527238,
+   "postings": 5340833
+  },
+  "A": {
+   "features": 9592,
+   "postings": 23997773
+  }
+ },
+ "bytes": 40609188,
+ "extract_seconds": 49.6,
+ "build_seconds": 60.2,
+ "workers": 12,
+ "soundness": {
+  "train_fit": {
+   "matching_blobs": 35,
+   "candidates": 43,
+   "missed": 0
+  },
+  "py_open": {
+   "matching_blobs": 5002,
+   "candidates": 6412,
+   "missed": 0
+  },
+  "with_open_json": {
+   "matching_blobs": 483,
+   "candidates": 541,
+   "missed": 0
+  },
+  "init_self_assign": {
+   "matching_blobs": 10473,
+   "candidates": 10712,
+   "missed": 0
+  },
+  "print_in_loop": {
+   "matching_blobs": 3966,
+   "candidates": 10367,
+   "missed": 0
+  },
+  "loop_append": {
+   "matching_blobs": 3506,
+   "candidates": 5783,
+   "missed": 0
+  },
+  "nested_fn": {
+   "matching_blobs": 2276,
+   "candidates": 2276,
+   "missed": 0
+  },
+  "except_pass": {
+   "matching_blobs": 1106,
+   "candidates": 1106,
+   "missed": 0
+  },
+  "js_fetch": {
+   "matching_blobs": 789,
+   "candidates": 943,
+   "missed": 0
+  },
+  "then_catch": {
+   "matching_blobs": 2614,
+   "candidates": 2670,
+   "missed": 0
+  },
+  "listener_arrow": {
+   "matching_blobs": 1852,
+   "candidates": 2525,
+   "missed": 0
+  },
+  "await_in_loop": {
+   "matching_blobs": 151,
+   "candidates": 151,
+   "missed": 0
+  }
+ }
+}
