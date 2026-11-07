@@ -101,7 +101,14 @@ assert swhforest.verify_view("data/release/rust", "data/release/rust/view_releas
 
 ## Runnable Scripts (`examples/`)
 
-Place the Parquet files of the 100k sample in `catalog/` (or a language release in `data/release/<lang>/`) and run from the repository root:
+Download the data from [Hugging Face](https://huggingface.co/datasets/halykoss/swhforest) into the repository root (the layout matches), then run from the repository root:
+
+```bash
+pip install -U huggingface_hub                                                             # provides the `hf` command
+hf download halykoss/swhforest --repo-type dataset --include "catalog/*" --local-dir .            # 100k sample (~100 MB)
+hf download halykoss/swhforest --repo-type dataset --include "data/release/rust/*" --local-dir .  # one language
+```
+
 
 ```bash
 PYTHONPATH=src python -m pytest -q tests                                       # Unit & property tests (no data needed)
@@ -114,6 +121,8 @@ PYTHONPATH=src python examples/04_query_release.py data/release/rust --fetch 5 #
 ---
 
 ## Public Dataset (v0.2.0 — 40% Sample of Stack-Edu)
+
+Available at **[huggingface.co/datasets/halykoss/swhforest](https://huggingface.co/datasets/halykoss/swhforest)** (CC-BY-4.0; Parquet files can be queried in place with DuckDB via `hf://datasets/halykoss/swhforest/...`).
 
 Deterministic 40% SHA-1 prefix sample (`blob_id < 66666666`) of deduplicated 200 B–200 kB files across the 10 largest languages in Stack-Edu (revision `eeec5ca`):
 

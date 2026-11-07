@@ -10,3 +10,5 @@ data/
 catalog/*.parquet
 catalog/views/
 results/
+# hf download --local-dir metadata
+.cache/
