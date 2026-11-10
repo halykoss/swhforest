@@ -1,5 +1,11 @@
 # SWHForest
 
+<p align="center">
+  <a href="https://arxiv.org/abs/2611.11439"><img alt="Paper" src="https://img.shields.io/badge/arXiv-2611.11439-b31b1b.svg?logo=arxiv"></a>
+  <a href="https://huggingface.co/datasets/halykoss/swhforest"><img alt="Dataset" src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-halykoss%2Fswhforest-ffd21e.svg"></a>
+  <a href="https://github.com/halykoss/swhforest"><img alt="Code" src="https://img.shields.io/badge/GitHub-Code-181717.svg?logo=github"></a>
+</p>
+
 **SWHForest** lets you filter, search by AST structure, and detect clones across **52.1M files** (**340.6M functions/classes** in 10 languages of [Stack-Edu](https://huggingface.co/datasets/HuggingFaceTB/stack-edu)) **before downloading source code** from the Software Heritage Archive (SWH).
 
 Instead of redistributing source text, SWHForest ships compact Parquet tables and a sharded AST index keyed by `blob_id` (Git SHA-1). You select or match files locally and download only the surviving candidates from SWH.
@@ -150,10 +156,13 @@ To rebuild a release from upstream Stack-Edu metadata and SWH blobs, see `script
 - **Code:** MIT ([`LICENSE`](LICENSE)) · **Dataset tables & index:** CC-BY-4.0 · **Source blobs:** fetched on demand from Software Heritage under their original upstream licenses.
 
 ```bibtex
-@inproceedings{pennino2026swhforest,
-  author    = {Pennino, Federico and Gurioli, Andrea and Gabbrielli, Maurizio and Ferragina, Paolo},
-  title     = {{SWHForest}: A Structural Curation and Search Layer for Large-Scale Code Corpora},
-  booktitle = {Proceedings of the International Conference on Mining Software Repositories (MSR)},
-  year      = {2026}
+@misc{pennino2026swhforest,
+  author        = {Pennino, Federico and Gurioli, Andrea and Gabbrielli, Maurizio and Ferragina, Paolo},
+  title         = {{SWHForest}: A Structural Curation and Search Layer for Large-Scale Code Corpora},
+  year          = {2026},
+  eprint        = {2611.11439},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.SE},
+  url           = {https://arxiv.org/abs/2611.11439}
 }
 ```

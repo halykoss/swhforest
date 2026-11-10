@@ -34,7 +34,7 @@ keywords:
   - dataset curation
   - structural catalog
 preferred-citation:
-  type: conference-paper
+  type: article
   title: "SWHForest: A Structural Curation and Search Layer for Large-Scale Code Corpora"
   authors:
     - family-names: "Pennino"
@@ -45,5 +45,9 @@ preferred-citation:
       given-names: "Maurizio"
     - family-names: "Ferragina"
       given-names: "Paolo"
-  collection-title: "Proceedings of the International Conference on Mining Software Repositories (MSR)"
+  journal: "arXiv preprint"
+  identifiers:
+    - type: other
+      value: "arXiv:2611.11439"
+  url: "https://arxiv.org/abs/2611.11439"
   year: 2026
